@@ -1,0 +1,237 @@
+/*CSS propeties of the modal*/
+body {
+    background-image: url('../images/background3.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #464646;
+    color: beige;
+}
+
+#main-heading{
+    font-family: Dubai;
+}
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    
+}
+
+.modal-content{
+    background-color: white;
+    margin: 15% auto;
+    padding: 1%;
+    border: 1px solid white;
+    width: 30%;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);   /*Shadows added to modal box for visual appeal*/
+}
+
+
+/*close button css cuustomizations*/
+.close {
+    color: rgba(170, 170, 170, 1);
+    float: right;
+    text-align: right;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Satisfy', cursive;
+}
+
+/*makes the close button black from grey on hover and changes cursor to pointer*/
+.close:hover,
+.close:focus{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.modal-content h1 {
+    text-align: center;                     /*Heading of the modal at the centre of modal*/
+    font-family: 'Satisfy', cursive;        /*Changed the font of heading of modals to satify cursive just for visual appeal. */
+    color: black;
+}
+
+/*CSS for form and input fields in the modal*/
+label {
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: sans-serif;
+    margin-top: 20px;
+    color: lightseagreen;
+}
+
+input {
+    font-size: 20px;
+    padding: 10px 0;
+    background-color: rgba(170, 170, 170, 0.2);
+    border : 0;
+    font-family: Dubai;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+}
+
+.formParent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/*CSS for button inside modal.*/
+.signbutton {
+    padding: 2%;
+    font-size: 20px;
+    background-color: green;
+    color: white;
+    margin-top: 20px;;
+
+}
+
+/*CSS for the signup anchor tag in the sign in modal.*/
+#signup-anchor {
+    color:blue;
+}
+
+
+a:hover{
+    cursor: pointer;
+}
+
+
+/*CSS for main heading of the blog. used font PT sans narrow to make it match  the font shown in the sample image of part 3*/
+.mainHeading{
+    display: inline-flex;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.heading {
+    text-align: center;
+}
+
+span{
+    font-size: medium;
+    margin-right: 10px;
+}
+
+
+form p{
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+/*CSS for aligning author name and edit button to the left and right parts of the window*/
+.pre-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/*CSS for the edit button.*/
+.edit{
+    margin-right: 50px;
+    background-color:  #ef3b65;  /*Color deduced precisely using online resources to match the color shown in sample page*/
+    color: white;
+    padding: 1% 2%;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);   /*Shadow given to button just for visuak appeal and to match the button shown in sample page*/
+    margin-bottom: 50px;
+    border:0;
+    font-weight: bolder;
+}
+
+/*CSS for like and comment buttons*/
+.likeBtn, .commentBtn {
+    margin : 30px 0 10px 50px;
+    background-color: #ef3b65;
+    color:white;
+    padding : 1% 2%;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);        /*Shadow given to button just for visuak appeal and to match the button shown in sample page*/
+    border : 0;
+    font-weight: bolder;
+}
+
+.commentBtn{
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+}
+
+/*CSS for the text just below the like button */
+.likePara {
+    margin-left: 50px;
+    margin-bottom: 30px;
+    font-family: 'Josefin Slab', serif;     /*google font used*/
+
+    font-weight: bold;
+}
+
+.comment-list-title {
+    margin-left: 50px;
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+
+/*Changed the font of the author name to cusrive to match ot resemble the font shown in sample page*/
+.author{
+    margin-left: 50px;
+    font-family: 'Satisfy', cursive;
+}
+
+.para{
+    margin:0 50px;
+}
+
+
+.commentBox{
+    margin-left: 50px;
+    border: 2px solid rgba(170, 170, 170, 1);
+    
+
+}
+
+/*Added grey color background to the comment section */
+.commentSection{
+    background-color: lightgray;
+    margin: 50px;
+    border: 10px solid lightgray;
+    width: 60%;
+    color: black;
+    font-family: Dubai;
+}
+
+/*Comment when posted is presented in a white box*/
+.commentPara {
+    margin: 10px 10px;
+    background-color: white;
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+/*Small customisations for when screen width is reduced*/
+@media(max-width:1000px){
+
+    .col{
+        width: 50%;
+    }
+    .modal-content{
+        width: 80%;
+    }
+    .form{
+        width: 80%;
+    }
+}

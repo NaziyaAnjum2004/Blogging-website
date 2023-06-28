@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <!--Links for Fonts BootStrap and CSS files in the head-->
+    <head>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet"> <!--link for header font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet"><!--link for main heading font to match the font in sample image heading of page 3-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap" rel="stylesheet"> <!--link for the font to change the font of the text below the like button-->
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="../styles/header.css">  <!--Since all pages will have the same header  i created and linkeda header.css file to all the files.-->
+        <link rel="stylesheet" href="../styles/post.css">
+
+        <!-- Javascript file will be linked at the bottonm line of body tag.-->
+
+    </head>
+
+
+    <body>
+        <header>
+
+            <!-- This header section will be common to all pages. Along with modal functionality-->
+
+            <div class = "headerText">
+                <h1>Blogger</h1>
+                <p>Explore. Imagine. Create.</p>
+            </div>
+
+            <div class = "headerButtons">
+                <button id = "signinButton" class = "top-btn">Sign In</button>
+                <button id = "signupButton" class ="top-btn">Sign Up</button>
+            </div>
+
+            <!-- This is the modal section where i have defined the modals for sign up button.  -->
+            <!-- Cross button which closes the modal on clicking also added-->
+
+            <div id = "signupModal" class = "modal">
+                <div id = "signup-modal-content" class = "modal-content">
+                    <span class="close">&times;</span>
+                    <div    class = "formParent">
+                        <form class = "form">
+                            <h1>Get Started</h1>
+                            <label for = "fullname">Full Name</label>
+                            <input type="text" required name = "fullname" id = "fullname" placeholder="Enter Full Name">
+                            <label for = "username">Username</label>
+                            <input type="text" required id = "username" name = "username" placeholder="Enter Username">
+                            <label for = "password1">Password</label>
+                            <input type = 'password' id = "password1" name ="password1" required placeholder="Enter Password" >
+                            <label for = "password2">Confirm Password</label>
+                            <input type = 'password' id = "password2" name ="password2" required placeholder="Confirm Password" >
+                            <button class = "signbutton">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- This is the modal section where i have defined the modals for sign in button.  -->
+            <!-- Cross button which closes the modal on clicking also added-->
+
+            <div id = "signinModal" class = "modal">
+                <div id = "signin-modal-content" class = "modal-content">
+                    <span class="close">&times;</span>    <!-- Cross Button -->
+                    <div    class = "formParent">
+                        <form class = "form">
+                            <h1>Welcome Back!</h1>
+                            <label for = "username">Username</label>
+                            <input type="text" required id = "logusername" name = "username" placeholder="Enter Username">
+                            <label for = "logpassword">Password</label>
+                            <input type = 'password' id = "logpassword" name ="logpassword" required placeholder="Enter Password" >
+                            <button class = "signbutton">Log In</button>
+                            <p>Not a member? <a id = "signup-anchor">Sign Up</a></p>    <!-- Sign up Text is wrapped in anchor tag which opens signup modal on clicking. -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!--Heading of the article or blog. becomes editable when edit button is clicked-->
+        <div class="heading">
+            <h1 id = "main-heading"class="mainHeading">Intro to React JS</h1>
+        </div>
+
+        <!--div for the Author name and edit button. comes before the content thats why class name pre-content-->
+        <div class = "pre-content">
+            <h1 id = 'author' class = "author"><span>by </span>Ken Cosgrove</h1>
+            <button type="button" id = "edit-btn" class="edit">Edit</button>
+        </div>
+
+        <!--Content of the article or blog. Becomes editable when edit button is clickedx-->
+        <div class="content">
+            <p  id = "main-para"class="para">ReactJS is a declarative, efficient, and flexible JavaScript library for building reusable UI components. It is an open-source, component-based front end library responsible only for the view layer of the application. It was created by Jordan Walke, who was a software engineer at Facebook. It was initially developed and maintained by Facebook and was later used in its products like WhatsApp & Instagram. Facebook developed ReactJS in 2011 in its newsfeed section, but it was released to the public in the month of May 2013.
+
+                Today, most of the websites are built using MVC (model view controller) architecture. In MVC architecture, React is the 'V' which stands for view, whereas the architecture is provided by the Redux or Flux.
+                
+                A ReactJS application is made up of multiple components, each component responsible for outputting a small, reusable piece of HTML code. The components are the heart of all React applications. These Components can be nested with other components to allow complex applications to be built of simple building blocks. ReactJS uses virtual DOM based mechanism to fill data in HTML DOM. The virtual DOM works fast as it only changes individual DOM elements instead of reloading complete DOM every time.
+                
+                To create React app, we write React components that correspond to various elements. We organize these components inside higher level components which define the application structure. For example, we take a form that consists of many elements like input fields, labels, or buttons. We can write each element of the form as React components, and then we combine it into a higher-level component, i.e., the form component itself. The form components would specify the structure of the form along with elements inside of it.Today, many JavaScript frameworks are available in the market(like angular, node), but still, React came into the market and gained popularity amongst them. The previous frameworks follow the traditional data flow structure, which uses the DOM (Document Object Model). DOM is an object which is created by the browser each time a web page is loaded. It dynamically adds or removes the data at the back end and when any modifications were done, then each time a new DOM is created for the same page. This repeated creation of DOM makes unnecessary memory wastage and reduces the performance of the application.
+
+                Therefore, a new technology ReactJS framework invented which remove this drawback. ReactJS allows you to divide your entire application into various components. ReactJS still used the same traditional data flow, but it is not directly operating on the browser's Document Object Model (DOM) immediately; instead, it operates on a virtual DOM. It means rather than manipulating the document in a browser after changes to our data, it resolves changes on a DOM built and run entirely in memory. After the virtual DOM has been updated, React determines what changes made to the actual browser's DOM. The React Virtual DOM exists entirely in memory and is a representation of the web browser's DOM. Due to this, when we write a React component, we did not write directly to the DOM; instead, we are writing virtual components that react will turn into the DOM.
+                </p>      
+        </div>
+
+
+        <div class="like">
+            <button id = "like-btn" class="likeBtn">Like</button>
+            <p id = "like-para" class="likePara">Be the first one to like this!</p>
+        </div>
+        
+        <div class = "commentnBtn">
+            <textarea id="comment-text" class="commentBox" rows="4" cols="90" placeholder="Leave a comment..."></textarea>
+            <br>
+            <button type = "button" class = "commentBtn" id = "commentBtn" onclick= "myFunction()">Comment</button>
+        </div>
+
+        <p class="comment-list-title">All Comments</p>
+        <!--Div empty now but This div will contain comments as we add them on page.-->
+        <div class="commentSection" id = "commentSection">
+
+        </div>
+       
+
+
+        <script src="../scripts/post5.js"></script>    <!-- Linked Javascript file at the end of body to make it properly functional-->
+    </body>
+</html>

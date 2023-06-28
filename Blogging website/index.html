@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">    <!-- This is satisfy cursive font link from Google Fonts. -->
+        <link rel="stylesheet" href="./styles/index.css">
+        <link rel="stylesheet" href="./styles/header.css">      <!--Since all pages will have the same header  i created and linkeda header.css file to all the files.-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@100;200&display=swap" rel="stylesheet">
+        <!-- Javascript file will be linked at the bottonm line of body tag.-->
+    
+    </head>
+
+    <body>
+        <!-- This header section will be common to all pages. Along with modal functionality-->
+        <header>
+            <div class = "headerText">
+                <h1>Blogger</h1>
+                <p>Explore. Imagine. Create.</p>
+            </div>
+
+            <div class = "headerButtons">
+                <button id = "signinButton" class = "top-btn">Sign In</button>
+                <button id = "signupButton" class ="top-btn">Sign Up</button>
+            </div>
+
+        <!-- This is the modal section where i have defined the modals for sign up button.  -->
+        <!-- Cross button which closes the modal on clicking also added-->
+
+            <div id = "signupModal" class = "modal">
+                <div id = "signup-modal-content" class = "modal-content">
+                    <span class="close">&times;</span>     <!-- Cross Button -->
+                    <div    class = "formParent">
+                        <form class = "form">
+                            <h1>Get Started</h1>
+                            <label for = "fullname">Full Name</label>
+                            <input type="text" required name = "fullname" id = "fullname" placeholder="Enter Full Name">
+                            <label for = "username">Username</label>
+                            <input type="text" required id = "username" name = "username" placeholder="Enter Username">
+                            <label for = "password1">Password</label>
+                            <input type = 'password' id = "password1" name ="password1" required placeholder="Enter Password" >
+                            <label for = "password2">Confirm Password</label>
+                            <input type = 'password' id = "password2" name ="password2" required placeholder="Confirm Password" >
+                            <button  id = "signup" class = "signbutton">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        <!-- This is the modal section where i have defined the modals for sign in button.  -->
+        <!-- Cross button which closes the modal on clicking also added-->
+
+            <div id = "signinModal" class = "modal">
+                <div id = "signin-modal-content" class = "modal-content">
+                    <span class="close">&times;</span>      <!-- Cross Button -->
+                    <div    class = "formParent">
+                        <form class = "form">
+                            <h1>Welcome Back!</h1>
+                            <label for = "username">Username</label>
+                            <input type="text" required id = "logusername" name = "username" placeholder="Enter Username">
+                            <label for = "logpassword">Password</label>
+                            <input type = 'password' id = "logpassword" name ="logpassword" required placeholder="Enter Password" >
+                            <button   class = "signbutton">Log In</button>
+                            <p>Not a member? <a id = "signup-anchor">Sign Up</a></p>      <!-- Sign up Text is wrapped in anchor tag which opens signup modal on clicking. -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        </div>
+        <div class="postButtons">
+            <button id = "allButton" onclick="location.href = './html/bloglist.html'">All Posts</button>   <!-- This button opens the bloglist.html page on clicking.-->
+            <button id = "createButton">Create Post</button>                                                <!-- This opens create post modal on clicking-->
+        </div>
+
+        <!-- This is the create post modal. Cross button has been added.-->
+
+        <div id = "createModal" class = "modal">
+            <div id = "create-modal-content" class = "modal-content">
+                <span class="close">&times;</span>          <!-- Cross Button -->
+                <div    class = "formParent">
+                    <form class = "form">
+                        <h1>Pen Your Post</h1>
+                        <label for = "title">Title</label>
+                        <input type="text" required id = "title" name = "title" placeholder="Enter the Title">
+                        <label for = "content">Content</label>
+                        <textarea rows="10" cols="20" name = "content" id = "content" placeholder="Let your thoughts out!"></textarea>
+                        <button onclick="store()" class = "signbutton">Create</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="./scripts/index.js"></script>      <!-- Linked Javascript file at the end of body to make it properly functional-->
+    </body>
+
+</html>

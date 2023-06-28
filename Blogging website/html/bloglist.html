@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+    <!-- Added fonts and bootstrap CSS and Bootstrap icons links in the head portion-->    
+    <head>
+
+        <!-- Google font for heading. Satisfy cursive-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@100;200&display=swap" rel="stylesheet">
+        <!--Booststrap CSS link below-->        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!--linking the common header file which applies the same header configuration for all pages-->
+        <link rel="stylesheet" href="../styles/header.css">
+        <link rel="stylesheet" href="../styles/bloglist.css">
+        <!--Bootstrap icons link for linking bin icon and dots icon below-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+        <!-- Javascript file will be linked at the bottom line of body tag.-->
+
+    </head>
+
+
+    <body>
+        <!-- This header section will be common to all pages. Along with modal functionality-->
+        <header>
+            <div class = "headerText">
+                <h1>Blogger</h1>
+                <p id = "logo">Explore. Imagine. Create.</p>
+            </div>
+
+            <div class = "headerButtons">
+                <button id = "signinButton" class = "top-btn">Sign In</button>
+                <button id = "signupButton" class ="top-btn">Sign Up</button>
+            </div>
+
+        <!-- This is the modal section where i have defined the modals for sign up button.  -->
+        <!-- Cross button which closes the modal on clicking also added-->
+
+            <div id = "signupModal" class = "modal">
+                <div id = "signup-modal-content" class = "modal-content">
+                    <span class="close">&times;</span>
+                    <div    class = "formParent">
+                        <form class = "form">
+                            <h1>Get Started</h1>
+                            <label for = "fullname">Full Name</label>
+                            <input type="text" required name = "fullname" id = "fullname" placeholder="Enter Full Name">
+                            <label for = "username">Username</label>
+                            <input type="text" required id = "username" name = "username" placeholder="Enter Username">
+                            <label for = "password1">Password</label>
+                            <input type = 'password' id = "password1" name ="password1" required placeholder="Enter Password" >
+                            <label for = "password2">Confirm Password</label>
+                            <input type = 'password' id = "password2" name ="password2" required placeholder="Confirm Password" >
+                            <button class = "signbutton">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        <!-- This is the modal section where i have defined the modals for sign up button.  -->
+        <!-- Cross button which closes the modal on clicking also added-->
+
+            <div id = "signinModal" class = "modal">
+                <div id = "signin-modal-content" class = "modal-content">
+                    <span class="close">&times;</span>
+                    <div    class = "formParent">
+                        <form class = "form">
+                            <h1>Welcome Back!</h1>
+                            <label for = "username">Username</label>
+                            <input type="text" required id = "logusername" name = "username" placeholder="Enter Username">
+                            <label for = "logpassword">Password</label>
+                            <input type = 'password' id = "logpassword" name ="logpassword" required placeholder="Enter Password" >
+                            <button class = "signbutton">Log In</button>
+                            <p>Not a member? <a id = "signup-anchor">Sign Up</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- list of all posts starts here -->
+
+        <div class="container">
+
+            <!--I used BOOTSTRAP GRID to make sure there are always two cards together horizontally on the screen.-->
+
+            <div class="row">
+            <div class="col">
+                    <div class="card">
+                        <div class="card-block">
+                            <div class = "cardlay">
+                                <div class = 'leftspace'>     <!--Created leftspace class to use in css to shift author name to the left.-->
+                                    <h6 class="card-text float-left">Don Draper</h6>
+                                </div>
+                                <div class = "rightspace">
+                                    <h5 class="card-title">The History of Javascript</h5>
+                                    <p class="card-text para">When the Internet boomed with public usage in the 1990s, technology companies battled to build the most powerful and efficient web browser on the market. This sparked the first “browser war,” between Microsoft (Internet Explorer) and NetScape (NetScape Navigator)</p>
+                                </div>
+                                <i class="bi bi-trash-fill garbage"></i>  <!--Bootstrap Buttons used-->
+                                <i onclick = "window.location.href = './post1.html'"class="bi bi-book dots"></i> <!--This button directs you to the post.html page.-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class = "col">
+                    <div class="card">
+                        <div class="card-block">
+                            <div class = "cardlay">
+                                <div class = 'leftspace'>       <!--Created leftspace class to use in css to shift author name to the left.-->
+                                    <h6 class="card-text float-left">Peggy Olson</h6>
+                                </div>
+                                <div class = "rightspace">
+                                    <h5 class="card-title">Short Story: There Was None Bolder</h5>
+                                    <p class="card-text para">“Calm down now and listen up,” said our sixth form tutor, Miss Hughes. “That includes you, Kara Simons.” She jabbed a finger in my direction. “Now, today’s the first of our career sessions and I’m pleased to welcome our two guests to speak about their careers and what you could expect if you were to follow in their footsteps.” I looked from a twenty-something woman in a pink two-piece to a man of a similar age, clad in camouflage get-up, olive green with grey-white bits. He wore a green beret with two rows of little white and red squares at the bottom, and a thick black belt. His lips were thin and he looked around the classroom with disdain. “This is Miss Cheskin,” said Miss Hughes, gesticulating to the woman. “She’s here to talk about a career in retail sales.” The woman stepped to the front and gave a bright smile. “So, how many of you like the idea of working in a department store? Hands up.” A plain spotty girl, Ruth Smith, lifted a fat arm up. “Wouldn’t mind.” “I wouldn’t want to be served by you!” said Johnny Harris. The class laughed. “That’s enough, Harris,” snapped Miss Hughes. “Please carry on, Miss Cheskin.” Miss Cheskin carried on, “Well, I’ve been</p>
+                                </div>
+                                <i class="bi bi-trash-fill garbage"></i>           <!--Bootstrap Buttons used-->
+                                <i onclick = "window.location.href = '../html/post2.html'"class="bi bi-book dots"></i>    <!--This button directs you to the post.html page.-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <!--I used BOOTSTRAP GRID to make sure there are always two cards together horizontally on the screen.-->
+                
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-block">
+                            <div class = "cardlay">
+                                <div class = 'leftspace'>       <!--Created leftspace class to use in css to shift author name to the left.-->
+                                    <h6 class="card-text float-left">Salvatore Ray</h6>
+                                </div>
+                                <div class = "rightspace">
+                                    <h5 class="card-title">Short Story: The Miner</h5>
+                                    <p class="card-text para">Originally built nearly two hundred years earlier, the substantial farmhouse had withstood all weathers. Until now. Yasmin Hill looked back in the distance to the roof just visible above the floodwater, then to Tom, his old face furrowed in concentration beneath the miner’s helmet as he rowed them out further and further away from her home, or what had been her home.
+                                        “We’re at sea now, young ‘un,” he said after a while.
+                                        The sky was the colour of mud and heavy drops of rain fell intermittently, spattering Yasmin’s thin bare legs and anorak, the hood pulled tight over her blonde hair. “How do you know?”
+                                        The rain ran in rivulets down Tom’s helmet, then were soaked up by the collar of an old duffle coat. “I can tell by the tide, it’s growing stronger.”
+                                        Tom began to turn the little boat in a quarter circle, the old knotted wood of the oars digging into the heavy green water, throwing up salty spray which from time to time blew into Yasmin’s face so that she could taste it on her tongue and lips. It reminded her of the little blue twists that came in bags of crisps. “I’m frightened, Tom. And cold.”
+                                        Tom began to pull harder on the oars. “Don’t you worry, lass, just a couple of miles down the coast and we’ll hit the shore. The land rises up and the floods won’t have reached it.”</p>
+                                </div>
+                                <i  class="bi bi-trash-fill garbage"></i>           <!--Bootstrap Buttons used-->
+                                <i onclick = "window.location.href = '../html/post3.html'"class="bi bi-book dots"></i>    <!--This button directs you to the post.html page.-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class = "col">
+                    <div class="card">
+                        <div class="card-block">
+                            <div class = "cardlay">
+                                <div class = 'leftspace'>       <!--Created leftspace class to use in css to shift author name to the left.-->
+                                    <h6 class="card-text float-left">Roger Sterling</h6>
+                                </div>
+                                <div class = "rightspace">
+                                    <h5 class="card-title">Worse Things Happen at Sea</h5>
+                                    <p class="card-text para">“Sorry, you’re the first person I’ve spoken to in ten years.” Her voice was cracked, dry like an empty pitcher left out to desiccate in the sun.
+                                        Jack Whitney looked down at the bedraggled young woman. Her hair was long and matted, perhaps once a dark blonde. Her face could be attractive, he thought, if it weren’t stained with dirt and what looked like tears, judging from her swollen eyes. He steadied himself against the swaying cabin door. “What’s your name?”
+                                        She wore an old green smock, faded and stained, and grey woollen leggings. On her right hand she wore a plain gold band. “It’s … it’s Sarah.”</p>
+                                </div>
+                                <i  class="bi bi-trash-fill garbage"></i>       <!--Bootstrap Buttons used-->
+                                <i onclick = "window.location.href = '../html/post4.html'"class="bi bi-book dots"></i>    <!--This button directs you to the post.html page.-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row last">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-block">
+                            <div class = "cardlay">
+                                <div class = 'leftspace'>       <!--Created leftspace class to use in css to shift author name to the left.-->
+                                    <h6 class="card-text float-left">Ken Cosgrove</h6>
+                                </div>
+                                <div class = "rightspace">
+                                    <h5 class="card-title">Introduction to React JS</h5>
+                                    <p class="card-text para">ReactJS is a declarative, efficient, and flexible JavaScript library for building reusable UI components. It is an open-source, component-based front end library responsible only for the view layer of the application. It was created by Jordan Walke, who was a software engineer at Facebook. It was initially developed and maintained by Facebook and was later used in its products like WhatsApp & Instagram. Facebook developed ReactJS in 2011 in its newsfeed section, but it was released to the public in the month of May 2013.</p>
+                                </div>
+                                <i  class="bi bi-trash-fill garbage"></i>       <!--Bootstrap Buttons used-->
+                                <i onclick = "window.location.href = '../html/post5.html'"class="bi bi-book dots"></i>    <!--This button directs you to the post.html page.-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Created delete modal which opens up asking the user if they want to delete the post when they click on the delete button-->
+
+            <div id = "deleteModal" class = "modal">
+                <div id = "delete-modal-content" class = "modal-content">
+                    
+                    <div class ="content-parent" >
+                        <p class = "warning-msg">Are you sure you want to delete your post?</p>
+                        <div class = "btns">
+                            <button type="button" id = "yes-btn" class="btn btn-danger">Yes</button>        <!--Bootstrap special button used class btn-danger-->
+                            <button type="button" id = "revert-btn" class="btn btn-success">No</button>     <!--Bootstrap special button used class btn-success-->
+                        </div>               
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../scripts/bloglist.js"></script>     <!-- Linked Javascript file at the end of body to make it properly functional-->
+    </body>
+
+</html>

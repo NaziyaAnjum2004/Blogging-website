@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <!--Links for Fonts BootStrap and CSS files in the head-->
+    <head>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet"> <!--link for header font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet"><!--link for main heading font to match the font in sample image heading of page 3-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap" rel="stylesheet"> <!--link for the font to change the font of the text below the like button-->
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="../styles/header.css">  <!--Since all pages will have the same header  i created and linkeda header.css file to all the files.-->
+        <link rel="stylesheet" href="../styles/post.css">
+
+        <!-- Javascript file will be linked at the bottonm line of body tag.-->
+
+    </head>
+
+
+    <body>
+        <header>
+
+            <!-- This header section will be common to all pages. Along with modal functionality-->
+
+            <div class = "headerText">
+                <h1>Blogger</h1>
+                <p>Explore. Imagine. Create.</p>
+            </div>
+
+            <div class = "headerButtons">
+                <button id = "signinButton" class = "top-btn">Sign In</button>
+                <button id = "signupButton" class ="top-btn">Sign Up</button>
+            </div>
+
+            <!-- This is the modal section where i have defined the modals for sign up button.  -->
+            <!-- Cross button which closes the modal on clicking also added-->
+
+            <div id = "signupModal" class = "modal">
+                <div id = "signup-modal-content" class = "modal-content">
+                    <span class="close">&times;</span>
+                    <div    class = "formParent">
+                        <form class = "form">
+                            <h1>Get Started</h1>
+                            <label for = "fullname">Full Name</label>
+                            <input type="text" required name = "fullname" id = "fullname" placeholder="Enter Full Name">
+                            <label for = "username">Username</label>
+                            <input type="text" required id = "username" name = "username" placeholder="Enter Username">
+                            <label for = "password1">Password</label>
+                            <input type = 'password' id = "password1" name ="password1" required placeholder="Enter Password" >
+                            <label for = "password2">Confirm Password</label>
+                            <input type = 'password' id = "password2" name ="password2" required placeholder="Confirm Password" >
+                            <button class = "signbutton">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- This is the modal section where i have defined the modals for sign in button.  -->
+            <!-- Cross button which closes the modal on clicking also added-->
+
+            <div id = "signinModal" class = "modal">
+                <div id = "signin-modal-content" class = "modal-content">
+                    <span class="close">&times;</span>    <!-- Cross Button -->
+                    <div    class = "formParent">
+                        <form class = "form">
+                            <h1>Welcome Back!</h1>
+                            <label for = "username">Username</label>
+                            <input type="text" required id = "logusername" name = "username" placeholder="Enter Username">
+                            <label for = "logpassword">Password</label>
+                            <input type = 'password' id = "logpassword" name ="logpassword" required placeholder="Enter Password" >
+                            <button class = "signbutton">Log In</button>
+                            <p>Not a member? <a id = "signup-anchor">Sign Up</a></p>    <!-- Sign up Text is wrapped in anchor tag which opens signup modal on clicking. -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!--Heading of the article or blog. becomes editable when edit button is clicked-->
+        <div class="heading">
+            <h1 id = "main-heading"class="mainHeading">Worse Things Happen at Sea</h1>
+        </div>
+
+        <!--div for the Author name and edit button. comes before the content thats why class name pre-content-->
+        <div class = "pre-content">
+            <h1 id = 'author' class = "author"><span>by </span>Roger Sterling</h1>
+            <button type="button" id = "edit-btn" class="edit">Edit</button>
+        </div>
+
+        <!--Content of the article or blog. Becomes editable when edit button is clickedx-->
+        <div class="content">
+            <p  id = "main-para"class="para">“Sorry, you’re the first person I’ve spoken to in ten years.” Her voice was cracked, dry like an empty pitcher left out to desiccate in the sun.
+                Jack Whitney looked down at the bedraggled young woman. Her hair was long and matted, perhaps once a dark blonde. Her face could be attractive, he thought, if it weren’t stained with dirt and what looked like tears, judging from her swollen eyes. He steadied himself against the swaying cabin door. “What’s your name?”
+                She wore an old green smock, faded and stained, and grey woollen leggings. On her right hand she wore a plain gold band. “It’s … it’s Sarah.”
+                
+                Jack, together with his two companions, Harry Cole and Jonno Wilkins, had taken the B Class Atlantic 75 out to a report of people stranded on a beach. The lifeboat service comprised a range of vessels, from this small three-person boat, up to the 17 metre, 42 tonnes Severn all-weather lifeboat, able to take on the worst sea conditions imaginable with its six experienced crew. Men who could be called from their warm beds and into ten-metre high waves and freezing gale-force winds at the ring of a telephone.
+                They’d encountered a bunch of students, cold and scared, huddling in a cave with the incoming tide lapping at its entrance. They’d gone ‘exploring,’ taking no heed of the sea’s power and intention. Once they’d been given a hot drink and a chance to recover, they’d been duly dropped off on terra firma with a stern warning.
+                Returning to the lifeboat station, the sea grew calm, then out of nowhere came a thick sea-fog, blanketing the water and giving only a few feet of visibility.
+                “Jack, there’s a vessel up ahead to the starboard,” Harry said. He looked back to the small radar screen. “Looks like it’s stationary.”
+                “Let’s take a look, but be careful.”
+                A black hulk loomed out of the fog and the lifeboat pulled up alongside. “I’ll check it out, looks like it might be abandoned,” Jack said. He climbed aboard and stood, gazing around the fishing vessel. The fog was so thick he could barely make out his companions in the lifeboat alongside and it was silent too, a silence so thick he felt he could cut it with a knife. He could make out the outline of the cabin and carefully picked his way there.
+                
+                “Sarah, what happened? Where are the other crew?”
+                She chewed at a fingernail. “My father was here, but he went, then Abraham and Patrick left.”
+                Jack stared. “What, went where?”
+                She got up from a bench and he could see her eyes were wet. “They left me, abandoned me!”
+                “Look, come with me, we’ll give you a hot drink, take you back to shore. Someone’ll look after you.”
+                Her eyes opened wide in bewilderment. “What? What’s that you say?”
+                Looking through the windows, Jack could see nothing but swirling banks of thick grey-brown fog. There was no sound, save that of his heart thudding and the water lap-lap-lapping quietly against the sides of the boat.
+                Suddenly, Sarah took a step forward and threw her arms around him, hugging him tight. Jack held her, feeling her young body against his, the push of her breasts against his chest. He could smell her hair, an odour of sweat and salt. He could feel her backbone through her smock. Then something changed. Her soft body was gone and it felt hard and lighter, the matted hair no longer against his cheek, instead something cold and smooth. Jack stepped back and stood, horrified, as he watched a white-boned skeleton, dressed in Sarah’s smock and rags, crash to the deck.
+                “Skipper, are you OK?” Jonno’s voice reverberated eerily in the thick mist, as if they were in a small, empty room.
+                Jack tried to clear his thoughts. “Yes, I’m fine,” he called, trying to sound normal but hearing the fear in his voice. “Just a minute.” He bent down and examined the bones. They were cold and clean. The skull grinned up at him. He slipped the gold ring off the skeleton’s finger and pocketed it. Then, picking it up in both arms he took it to the side of the boat away from the lifeboat and dropped it into the water. He watched it float, then, as the clothes became sodden, it slowly disappeared down into the mist-shrouded ocean. As it sank, an arm raised, as if in a farewell gesture. What would he tell the others? Nothing, he decided, he’d say there’d been no one on board. He put a hand into his pocket. Yes, the ring was still there. “I’m coming back,” he shouted out to his companions.
+                He climbed down a short ladder and back onto the lifeboat, once again hard up against the fishing boat. As he clambered aboard and the two waiting men became clear through the fog, he saw they were dressed in shabby grey tunics, crude shirts and petticoat trousers, covered with tar for protection against the cold. Both had lined, tawny faces.
+                “Greetings, I’m Abraham,” said one.
+                “And I’m Patrick,” said the other, smiling and revealing several black gaps in his teeth. He held out a hand. “The ring if you please.”
+                Jack looked from Patrick’s hand to the small, sharp dagger in Abraham’s. He handed the ring over, expecting it to be his last act on this earth. Instead, as he released the ring into Patrick’s waiting hand, he found himself looking at the concerned faces of Jonno and Harry. Abraham and Patrick had vanished.
+                “Jack, are you OK?” asked Harry. “You look like you’ve just seen a ghost.”
+                </p>      
+        </div>
+
+
+        <div class="like">
+            <button id = "like-btn" class="likeBtn">Like</button>
+            <p id = "like-para" class="likePara">Be the first one to like this!</p>
+        </div>
+        
+        <div class = "commentnBtn">
+            <textarea id="comment-text" class="commentBox" rows="4" cols="90" placeholder="Leave a comment..."></textarea>
+            <br>
+            <button type = "button" class = "commentBtn" id = "commentBtn" onclick= "myFunction()">Comment</button>
+        </div>
+
+        <p class="comment-list-title">All Comments</p>
+        <!--Div empty now but This div will contain comments as we add them on page.-->
+        <div class="commentSection" id = "commentSection">
+
+        </div>
+       
+
+
+        <script src="../scripts/post4.js"></script>    <!-- Linked Javascript file at the end of body to make it properly functional-->
+    </body>
+</html>

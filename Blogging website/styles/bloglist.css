@@ -1,0 +1,234 @@
+/*Background color changed to orange*/
+body {
+    background-image: url('../images/background2.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #464646;
+}
+
+p, h6{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+#logo{
+    font-family: 'Satisfy', cursive;
+}
+
+.headerText{
+    color:white;
+}
+
+/*CSS propeties of the modal*/
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    
+}
+
+.modal-content{
+    background-color: white;
+    margin: 15% auto;
+    padding: 1%;
+    border: 1px solid white;
+    width: 30%;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5); /*Shadows added to modal box for visual appeal*/
+}
+
+
+/*close button css cuustomizations*/
+.close {
+    color: rgba(170, 170, 170, 1);
+    float: right;
+    text-align: right;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Satisfy', cursive;
+}
+
+/*makes the close button black from grey on hover and changes cursor to pointer*/
+.close:hover,
+.close:focus{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h1 {
+    color: black;
+    text-align: center;                     /*Heading of the modal at the centre of modal*/
+    font-family: 'Satisfy', cursive;        /*Changed the font of heading of modals to satify cursive just for visual appeal.*/
+}
+
+/*CSS for form and input fields in the modal*/
+label {
+    font-size: 20px;
+    color: lightseagreen;
+    font-family: 'Lobster', cursive;
+    font-family: sans-serif;
+    margin-top: 20px;
+}
+
+input {
+    font-size: 20px;
+    padding: 10px 0;
+    background-color: rgba(170, 170, 170, 0.2);
+    border : 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+}
+
+.formParent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/*CSS for button inside modal.*/
+.signbutton {
+    padding: 2%;
+    font-size: 20px;
+    background-color:lightgreen;
+    border: lightgreen;
+    color: grey;
+    margin-top: 20px;;
+    font-family: 'Satisfy', cursive;
+
+}
+
+/*CSS for the signup anchor tag in the sign in modal.*/
+#signup-anchor {
+    color:blue;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+
+form p{
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+/*CSS for the warning message inside the delete modal*/
+.warning-msg{
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+/*CSS for the card layout for all blog posts*/
+.cardlay{
+    display:flex;
+    flex-direction: row;
+
+}
+
+/*CSS for the author name block on the left of the card*/
+.leftspace{
+    background-color: lightgoldenrodyellow;
+    top:0;
+    left:0;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px ;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    width: 5rem;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.rightspace{
+    margin-top: 40px;
+    width: 100%;
+    max-height: 4rem;
+    
+}
+/*OVERFLOW HIDDEN property added*/
+.card{
+
+    background-color: burlywood;
+    border-radius: 30px;
+    height: 12.5rem;
+    margin-bottom: 2rem;
+    overflow: hidden;  /*OVERFLOW HIDDEN property added*/
+
+}
+
+/*CSS for positioning delete button*/
+.garbage {
+      margin-top: 1rem;
+      max-height: 2rem;
+}
+
+/*CSS for positioning dots button*/
+.dots{
+    margin-top: 10rem;
+    margin-right: 1rem;
+}
+
+.last{
+    justify-content: center;
+}
+
+/*Buttons spacing in the delete modal*/
+.btns{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn{
+    width: 100px;
+}
+
+/*Small visual changes when width of the screen is reduced for better visual appeal*/
+
+@media (max-width: 800px) {
+    .leftspace{
+        font-size: 10px;
+        margin-right: 0;
+    }
+    .rightspace{
+        width: 80%;
+    }
+
+}
+
+
+/*Small visual changes for modal form width when width of the screen is reduced for better visual appeal*/
+
+@media(max-width:1000px){
+
+    .col{
+        width: 50%;
+    }
+    .modal-content{
+        width: 80%;
+    }
+    .form{
+        width: 80%;
+    }
+}
+
+
+
+
+
+  

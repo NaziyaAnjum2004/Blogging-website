@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <!--Links for Fonts BootStrap and CSS files in the head-->
+    <head>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet"> <!--link for header font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet"><!--link for main heading font to match the font in sample image heading of page 3-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap" rel="stylesheet"> <!--link for the font to change the font of the text below the like button-->
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="../styles/header.css">  <!--Since all pages will have the same header  i created and linkeda header.css file to all the files.-->
+        <link rel="stylesheet" href="../styles/post.css">
+
+        <!-- Javascript file will be linked at the bottonm line of body tag.-->
+
+    </head>
+
+
+    <body>
+        <header>
+
+            <!-- This header section will be common to all pages. Along with modal functionality-->
+
+            <div class = "headerText">
+                <h1>Blogger</h1>
+                <p>Explore. Imagine. Create.</p>
+            </div>
+
+            <div class = "headerButtons">
+                <button id = "signinButton" class = "top-btn">Sign In</button>
+                <button id = "signupButton" class ="top-btn">Sign Up</button>
+            </div>
+
+            <!-- This is the modal section where i have defined the modals for sign up button.  -->
+            <!-- Cross button which closes the modal on clicking also added-->
+
+            <div id = "signupModal" class = "modal">
+                <div id = "signup-modal-content" class = "modal-content">
+                    <span class="close">&times;</span>
+                    <div    class = "formParent">
+                        <form class = "form">
+                            <h1>Get Started</h1>
+                            <label for = "fullname">Full Name</label>
+                            <input type="text" required name = "fullname" id = "fullname" placeholder="Enter Full Name">
+                            <label for = "username">Username</label>
+                            <input type="text" required id = "username" name = "username" placeholder="Enter Username">
+                            <label for = "password1">Password</label>
+                            <input type = 'password' id = "password1" name ="password1" required placeholder="Enter Password" >
+                            <label for = "password2">Confirm Password</label>
+                            <input type = 'password' id = "password2" name ="password2" required placeholder="Confirm Password" >
+                            <button class = "signbutton">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- This is the modal section where i have defined the modals for sign in button.  -->
+            <!-- Cross button which closes the modal on clicking also added-->
+
+            <div id = "signinModal" class = "modal">
+                <div id = "signin-modal-content" class = "modal-content">
+                    <span class="close">&times;</span>    <!-- Cross Button -->
+                    <div    class = "formParent">
+                        <form class = "form">
+                            <h1>Welcome Back!</h1>
+                            <label for = "username">Username</label>
+                            <input type="text" required id = "logusername" name = "username" placeholder="Enter Username">
+                            <label for = "logpassword">Password</label>
+                            <input type = 'password' id = "logpassword" name ="logpassword" required placeholder="Enter Password" >
+                            <button class = "signbutton">Log In</button>
+                            <p>Not a member? <a id = "signup-anchor">Sign Up</a></p>    <!-- Sign up Text is wrapped in anchor tag which opens signup modal on clicking. -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!--Heading of the article or blog. becomes editable when edit button is clicked-->
+        <div class="heading">
+            <h1 id = "main-heading"class="mainHeading">Short Story: There was None Bolder</h1>
+        </div>
+
+        <!--div for the Author name and edit button. comes before the content thats why class name pre-content-->
+        <div class = "pre-content">
+            <h1 id = 'author' class = "author"><span>by </span>Peggy Olson</h1>
+            <button type="button" id = "edit-btn" class="edit">Edit</button>
+        </div>
+
+        <!--Content of the article or blog. Becomes editable when edit button is clickedx-->
+        <div class="content">
+            <p  id = "main-para"class="para">	
+                “Calm down now and listen up,” said our sixth form tutor, Miss Hughes. “That includes you, Kara Simons.” She jabbed a finger in my direction. “Now, today’s the first of our career sessions and I’m pleased to welcome our two guests to speak about their careers and what you could expect if you were to follow in their footsteps.”
+I looked from a twenty-something woman in a pink two-piece to a man of a similar age, clad in camouflage get-up, olive green with grey-white bits. He wore a green beret with two rows of little white and red squares at the bottom, and a thick black belt. His lips were thin and he looked around the classroom with disdain.
+“This is Miss Cheskin,” said Miss Hughes, gesticulating to the woman. “She’s here to talk about a career in retail sales.”
+The woman stepped to the front and gave a bright smile. “So, how many of you like the idea of working in a department store? Hands up.”
+A plain spotty girl, Ruth Smith, lifted a fat arm up. “Wouldn’t mind.”
+“I wouldn’t want to be served by you!” said Johnny Harris. The class laughed.
+“That’s enough, Harris,” snapped Miss Hughes. “Please carry on, Miss Cheskin.”
+Miss Cheskin carried on, “Well, I’ve been employed by John Lewis for almost ten years ….” She proceeded to tell us story after boring story of serving on the women’s accessory department, drawing floor layouts on the blackboard accordingly.
+I looked around and winked at Tom Jarvis. He winked back, rolling his eyes to the ceiling. I had to say I quite fancied Tom. I tore a piece of notepad off as quietly as I could, pleased that Miss Hughes didn’t look my way. I drew a heart with an arrow through it, writing the initials KS and TJ on either side, folded it up and passed it to Nora Evans, sitting next to me, jerking my head in Tom’s direction. “Pass it on,” I mouthed.
+“And it’s most important to keep an accurate inventory of stock,” Miss Cheskin said to the glazed eyes of the class. Thankfully, it seemed there were no further anecdotes and that was the end of her talk. She smiled. “So, I hope that’s given you some idea of the fun you can have if you work for John Lewis!”
+The corpulent Ruth Smith began to clap, then realising no one else was following her lead, her claps grew slower and softer and she turned beetroot red.
+“Thank you so much, Miss Cheskin, that was most interesting. Now I’d like to present Lance Corporal Lachlan McGlothlin,” said Miss Hughes.
+The class sat up as the soldier marched to the front of the class, grim-faced, thin-lipped and with a nose that looked like it had seen a fair few boxing matches. His small black eyes bore around the class like a laser beam. “Dae ony o’ ye lads wantae jyne th’ airmie then,” he announced with a broad Scottish accent.
+“Do any of you boys want to join the army?” translated Miss Hughes.
+Ruth Smith put her fat arm up once more. “Wouldn’t mind.”
+“Noo listen lassy th’ army’s na steid fur th’ likes o’ ye,” snapped the Lance Corporal, no translation being needed.
+Tom Jarvis put his hand up. “I’d be interested, sir.”
+Just then, my note was surreptitiously handed to Tom. But not surreptitiously enough for the Lance Corporal. “Whit’s that laddie?” he demanded, marching over and snatching it from Tom’s hand. A semblance of a smile broke over the soldier’s brutish face. “Och sae ye’v git a sweet hert in th’ class.”
+Tom looked around blankly. “What me, no.”
+The Lance Corporal screwed my note up and hurled it to land right in the centre of the waste paper bin to a round of applause. His thin lips turned up slightly in acknowledgement. “Listen, in th’ airmie, ye hae tae hae dominion ower th’ enemy, tis aboot killing fowk at th’ end o’ th’ day!”
+Just then I noticed that the clock must have stopped. It only showed ten minutes of the period had gone but old Miss Department Store must have been yakking and sketching for half an hour. Miss Hughes noticed it too. “Oh, the clock’s stopped, does anyone have the time.”
+“Quarter to, Miss,” said Herbert Braddock, the class creep.
+“Oh dear, I’ll have to get the caretaker to look at it.”
+“Och let me hae a quick keek,” said the soldier marching round Miss Hughes’ desk and reaching up to fiddle with the clock fixings. “A’ve some batteries oan me.”
+Then the strangest thing happened. The Lance Corporal froze, his face turned pale and he began to step backwards. Above the clock face we now observed the long hairy legs of a huge black spider. The soldier began to visibly sway.
+“Don’t worry,” laughed Miss Cheskin, “it’s only a spider, a Tegenaria Parietina, I believe, probably a boy. We get them in the store rooms. According to the experts, they’re quite harmless.” She grabbed a chair and stood on it, then to gasps from the class put her hand over the spider and closed it to a small fist. She got down and held her fist out towards the Lance Corporal, smiling.
+“Och, a’m feart o’ spiders,” he said in a tremulous voice, then he began to sag and was helped back to his seat by Miss Hughes as Miss Cheskin deposited the spider out of the window.
+And that was the end of our first careers talk. Grinning and winking at each other, we left Lachlan McGlothlin, muttering “Dae ye hae ony enrichments?” to the fussing of Miss Hughes and Miss Cheskin.
+Tom came over. “Hey, Kara, did you send me that note?”
+“What if I did?”
+“Well, d’you fancy coming out for a Big Mac tonight?”
+My blood began to pound. “Maybe. I’ll have to check my diary.”
+Tom smiled and winked. “See you there at seven!”</p>      
+        </div>
+
+
+        <div class="like">
+            <button id = "like-btn" class="likeBtn">Like</button>
+            <p id = "like-para" class="likePara">Be the first one to like this!</p>
+        </div>
+        
+        <div class = "commentnBtn">
+            <textarea id="comment-text" class="commentBox" rows="4" cols="90" placeholder="Leave a comment..."></textarea>
+            <br>
+            <button type = "button" class = "commentBtn" id = "commentBtn" onclick= "myFunction()">Comment</button>
+        </div>
+
+        <p class="comment-list-title">All Comments</p>
+        <!--Div empty now but This div will contain comments as we add them on page.-->
+        <div class="commentSection" id = "commentSection">
+
+        </div>
+       
+
+
+        <script src="../scripts/post2.js"></script>    <!-- Linked Javascript file at the end of body to make it properly functional-->
+    </body>
+</html>
